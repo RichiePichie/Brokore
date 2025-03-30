@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "440743978160",
+    "project_id": "brokore-1",
+    "storage_bucket": "brokore-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440743978160:android:ddefe48dc9a8389a0dc775",
+        "android_client_info": {
+          "package_name": "com.brokore.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXmUIysR9f58Cl_rpWDTvadTj-L_qpeV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
