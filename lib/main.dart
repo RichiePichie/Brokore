@@ -33,17 +33,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = S.of(context);
-    
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.brocore)),
+      appBar: AppBar(title: Text(S.of(context).brocore)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(l10n.slogan, style: const TextStyle(fontSize: 18)),
+            Text(
+              AppLocalizations.of(context)!.slogan,
+              style: const TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 10),
             const SizedBox(height: 20),
-            ElevatedButton(onPressed: () {}, child: Text(l10n.logIn)),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text(AppLocalizations.of(context)!.logIn),
+            ),
           ],
         ),
       ),

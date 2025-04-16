@@ -1,6 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 // **************************************************************************
@@ -27,11 +26,6 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
-    final localeName = Intl.canonicalizedLocale(name);
 
     // We're using Flutter's built-in app_localizations.dart instead of custom messages file
     return AppLocalizations.delegate.load(locale).then((appLocalizations) {
