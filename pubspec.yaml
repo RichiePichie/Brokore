@@ -30,6 +30,6 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/
+    - assets/images/brocore_logo.png
   uses-material-design: true
   generate: true

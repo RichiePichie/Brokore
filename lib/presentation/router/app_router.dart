@@ -16,7 +16,7 @@ class AppRouter {
             (context, state) => MaterialPage(
               child: BlocProvider(
                 create: (_) => SplashCubit(),
-                child: SplashScreen(),
+                child: const SplashScreen(),
               ),
             ),
       ),
@@ -26,7 +26,7 @@ class AppRouter {
             (context, state) => MaterialPage(
               child: BlocProvider(
                 create: (_) => HomeBloc(),
-                child: HomeScreen(),
+                child: const HomeScreen(),
               ),
             ),
       ),

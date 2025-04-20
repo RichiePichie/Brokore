@@ -1,4 +1,4 @@
-package com.brokore.brokore
+package com.brokore.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,4 +1,6 @@
+import 'package:brokore/core/theme/theme_constants.dart';
 import 'package:brokore/di.dart';
+import 'package:brokore/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -15,9 +17,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Brocore',
-      localizationsDelegates: [
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.background,
+        primaryColor: AppColors.primary,
+        colorScheme: ColorScheme(
+          brightness: Brightness.dark,
+          surface: AppColors.surface,
+          primary: AppColors.primary,
+          secondary: AppColors.accent,
+          onSurface: AppColors.text,
+          onPrimary: Colors.white,
+          onSecondary: Colors.black,
+          error: Colors.red,
+          onError: Colors.white,
+        ),
+        dividerColor: AppColors.divider,
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(color: AppColors.text),
+          bodyMedium: TextStyle(color: AppColors.text),
+          bodySmall: TextStyle(color: AppColors.textMuted),
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
         S.delegate,
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -25,35 +49,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(S.of(context).brocore)),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              AppLocalizations.of(context)!.slogan,
-              style: const TextStyle(fontSize: 18),
-            ),
-            const SizedBox(height: 10),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(AppLocalizations.of(context)!.logIn),
-            ),
-          ],
-        ),
-      ),
+      routerConfig: AppRouter.router,
     );
   }
 }
